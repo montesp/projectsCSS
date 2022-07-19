@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    background: papayawhip;
+    width: 400px;
+    height: 100px;
+    margin: 50px;
+}
+
+.container:hover .box {
+    /* transform: scale(1.2); */
+    transform: scale(1.2) translateY(10px);
+    /* transform-origin: -100% 50%; */
+}
+
+.box {
+    /* background: papayawhip; */
+    width: 100px;
+    height: 100px;
+}
+
+.box1 {
+    background: lightcoral;
+    transition: transform 500ms ;
+}
+
+.box2 {
+    background-color: Salmon;
+    transition: transform 1s ;
+}
+
+.box3 {
+    background-color: Darksalmon;
+    transition: transform 1.5s ;
+}
