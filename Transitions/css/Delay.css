@@ -1,0 +1,55 @@
+.container {
+    background-color: papayawhip;
+}
+
+.container:hover .circle {
+    transform: translate(500px, 200px) scale(1.1);
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.one {
+    background-color: #61481C;
+    transition: transform 3s linear;
+    transition-delay: 0.1s;
+}
+
+.two {
+    background-color: #A47E3B;
+    transition: transform 3s ease-in-out;
+    transition-delay: 0.2;
+}
+
+
+.three {
+    background-color: #BF9742;
+    transition: transform 3s ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.four {
+    background-color: #E6B325;
+    transition: transform 3s ease-in;
+    transition-delay: 0.4s;
+}
+
+.five {
+    background-color: #B09B71;
+    transition: transform 3s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.six {
+    background-color: #D8CCA3;
+    transition: transform 3s linear;
+    transition-delay: 0.6s;
+}
+
+
+
+
