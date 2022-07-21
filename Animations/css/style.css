@@ -1,11 +1,156 @@
+:root {
+    --background-phone: #d0eaff;
+    --montain:#c1684b;
+    --bush: #50ac64;
+    --cloud: #fffeff;
+}
+
+* {
+    margin: 0;
+}
+
 body {
-    counter-reset: game;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
-input:checked {
-    counter-increment: game;
+.phone {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: 8px solid black;
+    border-radius: 40px;
+    background-color: var(--background-phone);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+        0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.total-count::after {
-    content: counter(game);
+.layer {
+    position: absolute;
+    border: 1px solid black;
+}
+
+.layer-1 {
+    bottom: 0;
+    right: 60px;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    background-color: brown;
+}
+
+.layer-2 {
+    background-color: white;
+    bottom: 0;
+    left: 60px;
+    height: 450px;
+    width: 80px;
+    z-index: 2;
+}
+
+.layer-3 {
+    background-color: var(--montain);
+    z-index: 3;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 230px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.layer-4 {
+    background-color: white;
+    z-index: 4;
+    left: 40px;
+    bottom: 0;
+    height: 350px;
+    width: 80px;
+}
+
+.layer-5 {
+    background-color: var(--montain);
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    width: 220px;
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+}
+
+.layer-6 {
+    background-color: white;
+    z-index: 6;
+    right: 35px;
+    bottom: 0;
+    height: 230px;
+    width: 80px;
+}
+
+.layer-7 {
+    background-color: var(--montain);
+    z-index: 7;
+    right: 0;
+    bottom: 0;
+    height: 180px;
+    width: 160px;
+    border-radius: 20px 20px 0 0;
+}
+
+.layer-8 {
+    background-color: var(--bush) ;
+    z-index: 8;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 110px;
+    margin: 0 auto;
+}
+
+.layer-9 {
+    background-color: var(--cloud);
+    z-index: 9;
+    right: 0;
+    bottom: 0;
+    width: 120px;
+    height: 100px;
+}
+
+.layer-10 {
+    background-color: var(--cloud);
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    height: 100px;
+}
+
+.left-ear--outer {
+    background-color: white;
+    position: absolute;
+    left: 10px;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+}
+
+.left-ear--inner {
+    background-color: pink;
+    position: absolute;
+    left: 10px;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+}
+
+.right-ear--outer {
+
+}
+
+.right-ear--inner {
+
 }
