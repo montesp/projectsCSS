@@ -189,6 +189,24 @@ body {
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        height: 10px;
+    }
+    5% {
+        transform: translate(0px, 5px);
+        height: 3px;
+    }
+
+    10% {
+        transform: translate(0px, 0px);
+        height: 10px;
+    }
 }
 
 .head__eye--left {
