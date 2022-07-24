@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
 :root {
     --background-phone: #d0eaff;
     --dark-montain: #a2563b;
@@ -11,11 +13,16 @@
     margin: 0;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     display: grid;
     place-items: center;
     height: 100vh;
     width: 100%;
+    counter-reset: score;
 }
 
 .phone {
@@ -29,28 +36,106 @@ body {
         0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
+.title-game__container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    place-items: center;
+}
+
+.title-game {
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 2.6rem;
+}
+
+.counter-game--title {
+    margin-top: 5px;
+    font-size: 1.6rem;
+}
+
+
 .layer {
     position: absolute;
     /* border: 1px solid black; */
 }
 
-.layer-1 {
+.layer-1,
+.layer-6 {
     bottom: 0;
     right: 60px;
     z-index: 1;
     height: 460px;
     width: 80px;
     /* background-color: brown; */
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
 
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+input[type=checkbox] {
+    appearance: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 80px;
+    z-index: 2;
+}
+
+input:checked {
+    counter-increment: score;
+}
+
+.counter-game--title::after {
+    content: counter(score);
+}
+
+
+
 .layer-2 {
-    /* background-color: white; */
     bottom: 0;
     left: 60px;
     height: 460px;
     width: 80px;
     z-index: 2;
+    /* animation-name: rabbit; */
+    animation: 1s linear 0s infinite rabbit;
 }
+
+@keyframes rabbit {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+
+
 
 .layer-3 {
     background-color: var(--montain);
@@ -72,6 +157,7 @@ body {
     bottom: 0;
     height: 360px;
     width: 80px;
+    animation: 1s linear 0s infinite rabbit;
 }
 
 .layer-5 {
